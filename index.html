@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Welcome to iCoder. A blog for coding enthusiasts">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>टेक्नो मास्टर सोल्यूशन्स</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">टेक्नो मास्टर </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link btn btn-success" href="/">मुखपृष्ट <span class="sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            विषय
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">शैक्षणिक</a>
+            <a href="https://drive.google.com/file/d/18g4ThdJ7SUCcoQ2zUm8PgNDh7Ssy1wjz/view">बदली शासन
+              निर्णय 7 एप्रिल </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">मदत</a>
+            <a class="dropdown-item" href="#">आम्हास पत्र लिहा.</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">संपर्क केंद्र</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">English</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="शोध घ्या." aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">शोधा </button>
+      </form>
+      <div class="mx-2">
+        <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">लॉगिन</button>
+        <button class="btn btn-success" data-toggle="modal" data-target="#signupModal">नोंदणी करा.</button>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">टेक्नो मास्टर पोर्टलवर लॉगिन करा.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">ईमेल टाका.</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">आम्ही आपला ईमेल गोपनीय ठेवतो.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">पासवर्ड टाका.</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+              <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+            </div>
+            <button type="submit" class="btn btn-primary">लॉगिन</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">बंद करा.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">आपले नवीन खाते उघडा. </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">ईमेल टाका.</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">आम्ही आपला ईमेल गोपनीय ठेवतो.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">पासवर्ड टाका.</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="cexampleInputPassword1">पुनःच पासवर्ड टाका.</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1">
+            </div>
+
+            <button type="submit" class="btn btn-primary">खाते बनवा.</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">बंद करा.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-4">
+    <h2>एक उत्तम शैक्षणिक वेबसाटइट </h2>
+    <p>अध्ययन अध्यापन साहित्यासाह.. </p>
+    <a href="https://education.maharashtra.gov.in/"><button class="btn btn-success text-decoration-none">मुख्य सरल
+        पोर्टल</button></a>
+    <a href="https://education.maharashtra.gov.in/school/users/login/4"><button
+        class="btn btn-success text-decoration-none">सरल स्कूल पोर्टल</button></a>
+    <a href="https://education.maharashtra.gov.in/sanstha/users/login/51"><button
+        class="btn btn-success text-decoration-none">सरल संस्था पोर्टल</button></a>
+    <a href="https://education.maharashtra.gov.in/sanch/users/intermediateSanchAk"><button
+        class="btn btn-success text-decoration-none">संच मान्यता पोर्टल</button></a>
+    <a href="https://edustaff.maharashtra.gov.in/#show1"><button class="btn btn-success text-decoration-none">सरल स्टाफ
+        पोर्टल</button></a>
+    <a href="https://edustaff.maharashtra.gov.in/pavitra/users/login?link=5/"><button
+        class="btn btn-success text-decoration-none">सरल पवित्र पोर्टल</button></a>
+    <a href="https://student.maharashtra.gov.in/stud_db/users/login"><button
+        class="btn btn-success text-decoration-none">सरल स्टुडंट पोर्टल</button></a>
+    <a href="https://education.maharashtra.gov.in/mdm/users/login/5"><button
+        class="btn btn-success text-decoration-none">सरल MDM पोर्टल</button></a>
+  </div>
+  </div>
+  <div class="container my-4">
+    <a href="https://shalarth.maharashtra.gov.in/login.jsp"><button class="btn btn-danger text-decoration-none">शालार्थ
+        पोर्टल</button></a>
+    <a href="https://udiseplus.gov.in/#/home"><button class="btn btn-danger text-decoration-none">UDISE+</button></a>
+    <a href="https://books.balbharati.in/"><button class="btn btn-danger text-decoration-none">ई-बुक्स</button></a>
+    <a href="https://shaalasiddhi.niepa.ac.in/shaalasiddhi/Account/ShaalaSiddhiLogin"><button
+        class="btn btn-danger text-decoration-none">शाळा सिद्धी</button></a>
+    <a href="https://www.balbharati.in/"><button class="btn btn-danger text-decoration-none">बालभारती </button></a>
+    <a href="https://infosysspringboard.ausnz.onwingspan.com/en/"><button
+        class="btn btn-danger text-decoration-none">वारिष्ट व निवड श्रेणी प्रशिक्षण</button></a>
+    <a href="https://itpd.ncert.gov.in/"><button class="btn btn-danger text-decoration-none">निष्टा
+        प्रशिक्षण</button></a>
+    <a href="http://schoolreportcards.in/SRC-New/"><button class="btn btn-danger text-decoration-none">स्कूल रिपोर्ट
+        कार्ड </button></a>
+  </div>
+  <div class="container my-4">
+
+    <a href="https://www.mscepuppss.in/"><button class="btn btn-warning text-decoration-none">5 वी / 8 वी
+        शिष्यवृत्ती</button></a>
+    <a href="https://mahaeschol.maharashtra.gov.in/MahaEschol/Scholarships/Account/Login.aspx#1"><button
+        class="btn btn-warning text-decoration-none">ई-शिष्यवृत्ती (समाज कल्याण)</button></a>
+    <a href="https://scholarships.gov.in/"><button class="btn btn-warning text-decoration-none">ई-शिष्यवृत्ती
+        (अल्पसंख्यांक)</button></a>
+  </div>
+  </div>
+
+  <div class="container my-4">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 border border-info shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static ">
+            <strong class="d-inline-block mb-2 text-primary">ताज्या घडामोडी</strong>
+            <h3 class="mb-0">शिक्षक बदल्या </h3>
+            <div class="mb-1 text-muted">May 12</div>
+            <p class="card-text mb-auto">शिक्षकांच्या आंतरजिल्हा बदल्यांना हिरवा कंदील; मात्र जिल्हांतर्गत बदली बाबत
+              ‘प्रशचिन्ह’ ....!</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            < <img class="bd-placeholder-img" width="200" height="250"
+              src="https://source.unsplash.com/500x700/?computer,tech,code,laptop" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden border border-danger flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">शैक्षणिक</strong>
+            <h3 class="mb-0">जाणून घेऊया :</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">नवीन शैक्षणिक धोरण २०२०ला मंजूरी : २०२२-२०२३ पासून लागू होणार</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250"
+              src="https://source.unsplash.com/500x700/?tech,laptop" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden border border-success flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">माझी सेवा </strong>
+            <h3 class="mb-0">प्रशिक्षण</h3>
+            <div class="mb-1 text-muted">June 12</div>
+            <p class="card-text mb-auto">वरिष्ठ वेतनश्रेणी व निवडश्रेणी प्रशिक्षण प्रशिक्षणार्थ्यांच्या प्रशिक्षणासंबंधी
+              काही अडचणी अथवा शंका समाधानासाठी दररोज ( दि.०२ जून ते ०१ जुलै २०२२ या कालावधीत) zoom app वर प्रशिक्षण
+              सत्राचे आयोजन करण्यात आलेले आहे.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250"
+              src="https://source.unsplash.com/500x700/?tech,code" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded border border-warning overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning">दिनविशेष</strong>
+            <h3 class="mb-0">जागतिक पालक दिन</h3>
+            <div class="mb-1 text-muted">June 1</div>
+            <p class="mb-auto">१ जून २०१२ रोजी संयुक्त राष्ट्रसंघाच्या महासभेने १७ सप्टेंबर २०१२ रोजी हा संकल्प केला.
+              जगभरातील पालकांचे प्रेम, वचनबद्धता आणि निस्वार्थ प्रयत्नांना त्यांच्या मुलांकडे सन्मानित करण्यासाठी हा
+              दिवस घोषित करण्यात आला.</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250"
+              src="https://source.unsplash.com/500x700/?code,laptop" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2020-2021 Technomaster, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
