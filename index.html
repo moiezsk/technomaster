@@ -360,10 +360,12 @@
 
         <div class="section-title">
 
-          <h2>Contact</h2>
+          <h2>किरकोळ रजेचे आवेदनपत्र</h2>
 
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>कृपया सर्व माहिती मराठीत (देवनागरी लिपीत)भरावी.🙏</p>
+dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
 
+        </div>
         </div>
 
         <div class="row">
@@ -410,63 +412,50 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                              <form action="pdf.php" method="POST">
 
-              <div class="row">
+                            <div class="col-md-12">
+                               <input class="form-control" type="date" name="date" placeholder="दिनांक निवडा ......" required>
+                               <input class="form-control" type="text" name="sname" placeholder="शाळेचे संपूर्ण नाव......" required>
+                               <input class="form-control" type="text" name="vname" placeholder="गावाचे नाव......" required>
+                               <label for="cars">तालुका निवडा :</label>
+                                <select name="taluka" id="cars">
+                              <option value="औरंगाबाद">औरंगाबाद</option>
+                              <option value="गंगापूर">गंगापूर</option>
+                              <option value="खुलताबाद">खुलताबाद</option>
+                              <option value="कन्नड">कन्नड</option>
+                              <option value="फुलंब्री">फुलंब्री</option>
+                              <option value="पैठण">पैठण</option>
+                              <option value="सिल्लोड">सिल्लोड</option>
+                              <option value="सोयगाव">सोयगाव</option>
+                              <option value="वैजापुर">वैजापुर</option>
+                              </select>
+                               <input class="form-control" type="text" name="ename" placeholder="कर्मचाऱ्याचे संपूर्ण नाव......" required>
+                               <label for="cars">पद :</label>
+                                <select name="epost" id="cars">
+                              <option value="मुख्याध्यापक ">मुख्याध्यापक </option>
+                              <option value="पदवीधर शिक्षक">पदवीधर शिक्षक </option>
+                              <option value="सहाशिक्षक ">सहाशिक्षक </option>
+                              <option value="लिपिक">लिपिक</option>
+                              <option value="शिपाई ">शिपाई </option>
+                              </select>
+                              <label for="cars">रजेचे कारण  :</label>
+                                <select name="reason" id="cars">
+                              <option value="खाजगी कामानिमित्त">खाजगी कामानिमित्त </option>
+                              <option value="वैद्यकीय कारणास्तव">वैद्यकीय कारणास्तव</option>
+                               </select>
+                              </div>
 
-                <div class="form-group col-md-6">
+                            
+                  
 
-                  <label for="name">Your Name</label>
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" name="submit" class="btn btn-primary">Generate</button>
+                            </div>
+                        </form>      
+        
 
-                  <input type="text" name="name" class="form-control" id="name" required>
-
-                </div>
-
-                <div class="form-group col-md-6">
-
-                  <label for="name">Your Email</label>
-
-                  <input type="email" class="form-control" name="email" id="email" required>
-
-                </div>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="name">Subject</label>
-
-                <input type="text" class="form-control" name="subject" id="subject" required>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="name">Message</label>
-
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-
-              </div>
-
-              <div class="my-3">
-
-                <div class="loading">Loading</div>
-
-                <div class="error-message"></div>
-
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              </div>
-
-              <div class="text-center"><button type="submit">Send Message</button></div>
-
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
+      
 
     </section><!-- End Contact Section -->
     <div class="container footer-bottom clearfix">
