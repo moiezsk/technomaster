@@ -27,6 +27,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="/assets/css/custom.css" rel="stylesheet">
+  <link href="/assets/css/another.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -45,12 +46,75 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto typewriter"><a href="index.html">टेक्नो मास्टर </a></h1>
+      <h1 class="logo me-auto"><a href="index.html" style="body {
+        background-color: rgb(6, 34, 113);
+        height: 100%;
+        font-family: 'tradegothiclt-bold', sans-serif;
+      }
+      
+      h1 {
+        font-size: 5em;
+        color: rgb(6, 34, 113);
+        text-transform: uppercase;
+      }
+      
+      span {
+        border-right: .05em solid;
+        animation: caret 1s steps(1) infinite;
+      }
+      
+      @keyframes caret {
+        50% {
+          border-color: transparent;
+        }
+      }">टेक्नो मास्टर </a><script>document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "टेक्नो मास्टर म्हणजे ", "शिक्षक सेवा ", "विद्यार्थी पालक सेवा", "शासकीय कर्मचारी सेवा "];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});</script></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
+   
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
@@ -96,17 +160,18 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container typewriter">
+    <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
           data-aos="fade-up" data-aos-delay="200">
-          <h1>पोर्टलवर आपले स्वागत आहे...</h1>
+          <h1>टेक्नो मास्टर पोर्टलवर आपले स्वागत आहे...</h1>
           <h2>प्रगत शैक्षणिक महाराष्ट्रातील तमाम तंत्रस्नेही शिक्षक बांधवांसाठी ज्ञानाचे व माहितीचे आदान प्रदान
             करण्यासाठी तयार करण्यात आळेले एकमेव उत्तम शैक्षणिक वेब पोर्टल.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="login.html" class="btn-get-started scrollto">Login</a>
+            <a href="/login.html" class="btn-get-started scrollto">Login</a>
              <a href="#contact" class="glightbox btn-watch-video"><i
                 class="bi bi-play-circle"></i><span>रजेचे आवेदनपत्र</span></a>
+              
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -366,24 +431,24 @@
 
 
         <div class="col-lg-16 mt-9 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="/index.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <p> <b> <h4>कृपया खालील माहिती मराठीत (देवनागरी) लिपीत भरा.</h4></b></p>
               <div class="form-group col-md-2">
-                <label for="name">रजेचा दिनांक निवडा.</label>
+                <label for="date">रजेचा दिनांक निवडा.</label>
                 <input class="form-control" type="date" name="date" placeholder="दिनांक निवडा ......" required>
               </div>
               <div class="form-group col-md-4">
-                <label for="name">शाळेचे \ कार्यालयाचे नाव :-</label>
+                <label for="sname">शाळेचे \ कार्यालयाचे नाव :-</label>
                 <input class="form-control" type="text" name="sname" placeholder="शाळेचे संपूर्ण नाव लिहा..." required>
               </div>
               <div class="form-group col-md-4">
-                <label for="name">केंद्राचे\अस्थापनेचे नाव :-</label>
-                <input class="form-control" type="text" name="sname" placeholder="केंद्राचे नाव लिहा..." required>
+                <label for="cname">केंद्राचे\अस्थापनेचे नाव :-</label>
+                <input class="form-control" type="text" name="cname" placeholder="केंद्राचे नाव लिहा..." required>
               </div>
               <div class="form-group col-md-2">
-                <label for="name">तालुका निवडा :</label>
-                <select class="form-control" type="select" name="sname" placeholder="केंद्राचे नाव लिहा..." required
+                <label for="tname">तालुका निवडा :</label>
+                <select class="form-control" type="select" name="tname" placeholder="तालुका निवडा " required
                   name="taluka" id="taluka" form-control>
                   <option value="औरंगाबाद">औरंगाबाद</option>
                   <option value="गंगापूर">गंगापूर</option>
@@ -397,13 +462,13 @@
                 </select>
               </div>
               <div class="form-group col-md-4">
-                <label for="name">कर्मचाऱ्याचे नाव :-</label>
-                <input class="form-control" type="text" name="sname"
+                <label for="ename">कर्मचाऱ्याचे नाव :-</label>
+                <input class="form-control" type="text" name="ename"
                   placeholder="कर्मचाऱ्याचे संबोधनासह संपूर्ण नाव लिहा..." required>
               </div>
               <div class="form-group col-md-2">
-                <label for="name">पद :-</label>
-                <select class="form-control" type="select" name="sname" placeholder="केंद्राचे नाव लिहा..." required
+                <label for="pname">पद :-</label>
+                <select class="form-control" type="select" name="pname" placeholder="पद" required
                   name="taluka" id="taluka" form-control>
                   <option value="मुख्याध्यापक ">मुख्याध्यापक </option>
                   <option value="पदवीधर शिक्षक">पदवीधर शिक्षक </option>
@@ -413,8 +478,8 @@
                 </select>
               </div>
               <div class="form-group col-md-3">
-                <label for="name">रजेचे संक्षिप्त कारण :-</label>
-                <select class="form-control" type="select" name="sname" placeholder="केंद्राचे नाव लिहा..." required
+                <label for="rname">रजेचे संक्षिप्त कारण :-</label>
+                <select class="form-control" type="select" name="rname" placeholder="रजेचे संक्षिप्त कारण :-" required
                   name="taluka" id="taluka" form-control>
                   <option value="खाजगी कामानिमित्त">खाजगी कामानिमित्त </option>
                   <option value="वैद्यकीय कारणास्तव">वैद्यकीय कारणास्तव</option>
@@ -470,6 +535,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/another.js"></script>
 
 </body>
 
