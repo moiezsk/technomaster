@@ -1,36 +1,453 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="assets/css/login.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="login-box typewriter">
-      <h2>It will be Available Soon...</h2>
-      <h2>Its UNDER Construction</h2>
-      <h2>Login</h2>
-      <form>
-        <div class="user-box">
-          <input type="text" name="" required="">
-          <label>Username</label>
-        </div>
-        <div class="user-box">
-          <input type="password" name="" required="">
-          <label>Password</label>
-        </div>
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
-      </form>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bootstrap demo</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<style>
+
+  body{
+
+  background:#1a5e5b!important;
+
+}
+
+header .modal .close {
+
+    top: 0;
+
+    right: -6px;
+
+    color: black;
+
+    opacity: 1;
+
+}
+
+
+
+header .modal .close:focus {
+
+    box-shadow: none;
+
+    outline: none;
+
+}
+
+
+
+header .input-group-prepend i {
+
+    color: #1c1891;
+
+}
+
+
+
+header .modal .modal-body label {
+
+    font-size: 13px;
+
+}
+
+
+
+header .modal .modal-body input {
+
+    border: 1px solid #EDEDED!important;
+
+    font-size: 14px;
+
+}
+
+
+
+header .modal .modal-body input:focus {
+
+    box-shadow: none;
+
+}
+
+
+
+header .modal .modal-body input::placeholder {
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+}
+
+
+
+header .modal .modal-body input:-ms-input-placeholder {
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+}
+
+
+
+header .modal .modal-body input::-ms-input-placeholder {
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+}
+
+
+
+header .modal .modal-body .btn {
+
+    background-color: #07e087;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    z-index: 1;
+
+}
+
+
+
+header .modal .modal-content {
+
+    border-radius: 10px
+
+}
+
+
+
+header .modal .modal-footer .btn {
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    background-color: #fff;
+
+}
+
+
+
+header .modal .modal-footer a:focus {
+
+    box-shadow: none;
+
+}
+
+
+
+header .otp_prepend {
+
+    background-color: #74CCF8!important;
+
+    font-size: 12px!important;
+
+    font-weight: 500!important;
+
+}
+
+
+
+</style>
+
+  </head>
+
+
+
+<body>
+
+  <div class="container text-center">
+
+    <header>
+
+      
+
+          <div class="auth_btns mx-auto d-inline-block mt-5 pt-5">
+
+            <a class="btn f_15 login_btn btn-danger text-dark" data-toggle="modal" data-target="#sign_in_popup" onclick="show_singl_popup()">SIGN IN</a>
+
+            <a class="btn f_15 signup_btn  btn-success text-dark" data-toggle="modal" data-target="#sign_up_popup">SIGN UP</a>
+
+      </div>
+
+      <div class="modal fade" id="sign_in_popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" role="document" id="signin">
+
+          <div class="modal-content p-sm-4 p-3 position-relative">
+
+            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+
+              <i class="fas fa-times-circle fa-lg"></i>
+
+            </button>
+
+            <div class="modal-header border-0">
+
+              <h5 class="modal-title text-center w-100">Sign in to your Account</h5>
+
+            </div>
+
+            <div class="modal-body">
+
+              <form action="#">
+
+                <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <div class="input-group-text rounded-0 border-0"><i class="fas fa-envelope top_icons_col"></i></div>
+
+                  </div>
+
+                  <input type="email" class="form-control rounded-0" id="inlineFormInputGroup" placeholder=" Email Address">
+
+                </div>
+
+                <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <div class="input-group-text rounded-0 border-0"><i class="fas fa-key top_icons_col"></i></div>
+
+                  </div>
+
+                  <input type="password" class="form-control rounded-0" id="inputPassword" placeholder="Password">
+
+                </div>
+
+                <button class="btn w-100 text-dark rounded-0 py-2" type="submit">Sign in</button>
+
+              </form>
+
+            </div>
+
+            <div class="modal-footer border-0 d-block p-0">
+
+              <button class="btn p-0 text-dark d-block mx-auto" id="otp_btn">Sign in with OTP</button>
+
+              <button class="btn p-0 text-dark d-block mt-3 mx-auto" id="frgt_btn">Forgot Password?</button>
+
+            </div>
+
+    
+
+          </div>
+
+        </div>
+
+        <!-- sign in with otp div -->
+
+    
+
+        <div class="modal-dialog modal-dialog-centered" role="document" id="signotp">
+
+          <div class="modal-content p-sm-4 p-3 position-relative">
+
+            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+
+              <i class="fas fa-times-circle fa-lg"></i>
+
+            </button>
+
+            <div class="modal-header border-0">
+
+              <h5 class="modal-title text-center w-100">Sign in to your Account</h5>
+
+            </div>
+
+            <div class="modal-body">
+
+              <form action="#">
+
+    <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <div class="input-group-text rounded-0 border-0"><i class="fas fa-phone top_icons_col"></i></div>
+
+                  </div>
+
+                  <input type="text" class="form-control rounded-0" id="inlineFormInputGroup" placeholder=" Phone NUmber">
+
+                </div>
+
+                <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <button type="submit" class="btn input-group-text rounded-0 border-0 text-white otp_prepend">Get OTP</button>
+
+                  </div>
+
+                  <input type="text" class="form-control rounded-0" id="inputOtp" placeholder="Enter your OTP">
+
+                </div>
+
+                <button class="btn w-100 text-white rounded-0 py-2 mx-auto" type="submit">Sign in</button>
+
+              </form>
+
+            </div>
+
+            <div class="modal-footer border-0 d-block p-0">
+
+              <button class="btn p-0 text-dark d-block mx-auto" id="sign_with_pass">Sign in with Password</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+    
+
+    <!-- forgot password -->
+
+    
+
+        <div class="modal-dialog modal-dialog-centered" role="document" id="f_paswrd">
+
+          <div class="modal-content p-sm-5 p-3 position-relative">
+
+            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+
+              <i class="fas fa-times-circle fa-lg"></i>
+
+            </button>
+
+            <div class="modal-header border-0">
+
+              <h5 class="modal-title text-center w-100">Reset Your Password</h5>
+
+            </div>
+
+            <div class="modal-body">
+
+              <form action="#">
+
+                <label for="email_forgot">Enter your email address</label>
+
+                <div class="input-group-prepend mb-5">
+
+                  <div class="input-group-text rounded-0 border-0"><i class="fas fa-envelope top_icons_col"></i></div>
+
+                  <input type="email" class="form-control rounded-0" id="email_forgot" placeholder=" Email Address">
+
+                </div>
+
+                <button class="btn w-100 text-white rounded-0 py-2" type="submit">Send</button>
+
+              </form>
+
+            </div>
+
+            <div class="modal-footer border-0 d-block py-2">
+
+              <button class="btn p-0 text-dark d-block mx-auto" id="back_to_log">Back to Login</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- end of signin popup -->
+
+      <!-- pop up for sign up -->
+
+      <div class="modal fade" id="sign_up_popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+          <div class="modal-content p-sm-4 p-3 position-relative">
+
+            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+
+              <i class="fas fa-times-circle fa-lg"></i>
+
+            </button>
+
+            <div class="modal-header border-0">
+
+              <h5 class="modal-title text-center w-100">Sign up to your Account</h5>
+
+            </div>
+
+            <div class="modal-body">
+
+              <form action="#">
+
+    <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <div class="input-group-text rounded-0 border-0"><i class="fas fa-phone top_icons_col"></i></div>
+
+                  </div>
+
+                  <input type="text" class="form-control rounded-0" id="inlineFormInputGroup" placeholder=" Phone NUmber">
+
+                </div>
+
+                <div class="input-group mb-4">
+
+                  <div class="input-group-prepend">
+
+                    <button type="submit" class="input-group-text btn rounded-0 border-0 text-white otp_prepend">Get OTP</button>
+
+                  </div>
+
+                  <input type="text" class="form-control rounded-0" id="inputOtp1" placeholder="Enter your OTP">
+
+                </div>
+
+                <button class="btn w-100 text-dark rounded-0 py-2" type="submit">Lets Get Started</button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
 </html>
